@@ -24,7 +24,7 @@ public class AddPlayerServlet extends HttpServlet {
             p.setIndexId(Integer.parseInt(req.getParameter("indexId")));
 
             dao.addPlayer(p);
-            resp.sendRedirect("index.jsp");
+            resp.sendRedirect("players.jsp");
         } catch (Exception e) {
             e.printStackTrace();
             resp.getWriter().println("Error: " + e.getMessage());

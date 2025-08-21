@@ -34,7 +34,7 @@ public class UpdatePlayerServlet extends HttpServlet {
             Player p = new Player(id, name, fullName, age, indexId);
             dao.updatePlayer(p);
 
-            resp.sendRedirect("players"); // redirect về danh sách player sau khi update
+            resp.sendRedirect("players");
         } catch (Exception e) {
             e.printStackTrace();
             resp.getWriter().println("Error updating player: " + e.getMessage());

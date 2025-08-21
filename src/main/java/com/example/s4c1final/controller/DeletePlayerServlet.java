@@ -31,7 +31,6 @@ public class DeletePlayerServlet extends HttpServlet {
 
             int id = Integer.parseInt(idStr);
 
-            // gọi DAO với try-catch bên trong
             try {
                 dao.deletePlayer(id);
                 resp.sendRedirect("players"); // redirect về danh sách

@@ -25,16 +25,12 @@ public class ListPlayerServlet extends HttpServlet {
 
         List<Player> players = dao.getAllPlayers();
 
-        // Gắn danh sách vào request attribute
         request.setAttribute("players", players);
 
-        // Forward sang JSP
         RequestDispatcher dispatcher = request.getRequestDispatcher("players.jsp");
         dispatcher.forward(request, response);
     }
 
     @Override
-    public void destroy() {
-        // Cleanup nếu cần
-    }
+    public void destroy() {}
 }
